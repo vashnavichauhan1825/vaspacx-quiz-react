@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export const dummyQuiz = [{
   category:{
+  quizId:uuidv4(),
   quizTitle:"Quiz on Space Agencies and Centers in India",
   quizDetail:"This quiz level is hard . so are you ready ? You have 10 seconds to answer each question. The faster you answer, the higher your score. When you are done, try again to beat your best score!",
   quiz :[ { 
@@ -47,6 +48,7 @@ export const dummyQuiz = [{
 }]}},
 {
   category:{
+    quizId:uuidv4(),
     quizTitle:"This Quiz based on Universe and solar system",
     quizDetail:"Welcome to interesting Easy General Knowledge Questions and Answers Quiz. It has Multiple Choice Questions with a single correct answer.",
     quiz : [{ 
@@ -91,6 +93,7 @@ export const dummyQuiz = [{
       answer:"Mercury"
     }]}},
  { category:{
+    quizId:uuidv4(),
     quizTitle:"This Quiz based on Astronomy and Facts about space !",
     quizDetail:"Welcome to another interesting Hard General Knowledge Questions and Answers Quiz. It has Multiple Choice Questions with a single correct answer.",
     quiz : [{ 
@@ -135,6 +138,7 @@ export const dummyQuiz = [{
       answer:"Mercury"
   }]}},
  { category:{
+    quizId:uuidv4(),
     quizTitle:"Quiz for children's under age 10 to 15 yrs old",
     quizDetail:"Perfect for kids, this quiz will get you thinking about the fascinating topics of space and astronomy. Quizzes have become a more popular tool !",
     quiz : [{ 

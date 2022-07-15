@@ -1,6 +1,6 @@
 import { CategoryCard, CategoryWrapper, NormalButton, QuizCategoryCont } from '../../components/style'
 import { dummyQuiz } from '../../data'
-
+import {Link} from 'react-router-dom'
 
 const CategoryPage = () => {
    
@@ -11,7 +11,7 @@ const CategoryPage = () => {
                 <CategoryCard>
             <h2>{quiz.category.quizTitle}</h2>
              <p>{quiz.category.quizDetail}</p>
-             <NormalButton>Play Quiz</NormalButton>
+           <Link to={`/rules/${quiz.category.quizId}`}> <NormalButton>Play Quiz</NormalButton></Link>
             </CategoryCard>
             )
             }

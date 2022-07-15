@@ -33,10 +33,9 @@ export const QuizIntroCont = styled.div`
   flex-direction: column;
   border-radius: 9px;
   padding: 1rem;
-  padding-right: 10rem;
   position: absolute;
   top: 13%;
-  left: 10.5%;
+ left: 20%;
   h4 {
     letter-spacing: 1px;
     word-spacing: 6px;
@@ -78,6 +77,9 @@ export const CategoryCard = styled.div`
   gap: 10px;
   border-radius: 10px;
   
+  a{
+    text-decoration:none;
+  }
   p{
     display: inline-block;
     padding: 0rem 1rem;

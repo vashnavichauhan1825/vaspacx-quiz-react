@@ -1,6 +1,7 @@
  
 import {Link} from 'react-router-dom'
 import { EffectButton, HomeContainer, QuizIntroCont, RulesList, VaspacxLogo } from '../../components/style'
+import { dummyQuiz } from '../../data'
 
 const Home = () => {
   return (

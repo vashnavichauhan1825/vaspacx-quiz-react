@@ -5,6 +5,7 @@ import {Route,Routes} from 'react-router-dom'
 import CategoryPage from "./pages/category/CategoryPage";
 import QuePage from "./pages/quePage/QuePage";
 import ResultPage from "./pages/result/ResultPage";
+import CategoryRules from "./components/Rules/CategoryRules";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/category" element={<CategoryPage/>}/>
+    <Route path="/rules/:categoryId" element={<CategoryRules/>}/>
     <Route path="/quiz" element={<QuePage/>}/>
     <Route path="/result" element={<ResultPage/>}
     />
