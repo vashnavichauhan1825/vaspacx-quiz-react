@@ -1,27 +1,23 @@
- 
+ import { useSelector } from 'react-redux'
 import {Link} from 'react-router-dom'
-import { EffectButton, HomeContainer, QuizIntroCont, RulesList, VaspacxLogo } from '../../components/style'
-import { dummyQuiz } from '../../data'
-
+import { EffectButton, HomeContainer, QuizIntroCont, RulesList, VaspacxContainer, VaspacxLogo } from '../../components/style'
+import vaspacx from '../../assests/vaspacx.png'
+import quiz from '../../assests/quiz.png'
+import VaspacxFooter from '../../components/footer/Footer'
+import ToggleTheme from '../../components/toggleTheme/ToggleTheme'
+import vaspacxlight from '../../assests/vaspacxlight.png'
+import quizlight from '../../assests/quizlight.png'
 const Home = () => {
+  const toggle = useSelector(state=>state.theme.theme)
   return (
     <HomeContainer>
-      <QuizIntroCont>
-        <VaspacxLogo>
-            Vaspac<i className="fa fa-xing" aria-hidden="true"></i>
-        </VaspacxLogo>
-        <h4>Hii 👋 friends ! myself <strong>Kido</strong>, kindly Read Rules before get started !</h4>
-        <RulesList>
-          <li>There are five questions in Quiz</li>
-          <li>you can choose only one option</li>
-          <li>4 marks for each Question</li>
-          <li>There is no negative marking</li>
-          <li>You can also skip the questions</li>
-        </RulesList>
-        <p>Let's go to the vaspacx quiz world by just clicking this button !</p>
-        <Link to="/category"><EffectButton><i class="fa fa-chevron-right" aria-hidden="true"></i>Start Quiz</EffectButton></Link>
-      </QuizIntroCont>
-  
+    <ToggleTheme/>
+      <VaspacxContainer>
+        <img src={toggle?vaspacx:vaspacxlight}/>
+        <img src={toggle?quiz:quizlight}/>
+     <Link to="/category">  <EffectButton><i class="fa fa-chevron-right" aria-hidden="true"></i> Let's Go!</EffectButton></Link> 
+      </VaspacxContainer>
+      <VaspacxFooter/>
     </HomeContainer>
   )
 }

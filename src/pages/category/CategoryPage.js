@@ -1,11 +1,13 @@
-import { CategoryCard, CategoryWrapper, NormalButton, QuizCategoryCont } from '../../components/style'
+import { CategoryCard, CategoryWrapper, NormalButton, QuizCategoryCont, SecButton } from '../../components/style'
 import { dummyQuiz } from '../../data'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import ToggleTheme from '../../components/toggleTheme/ToggleTheme';
 
 const CategoryPage = () => {
-   
+   const navigate = useNavigate();
   return (
     <CategoryWrapper>
+   <ToggleTheme/>
         <QuizCategoryCont>{
             dummyQuiz.map((quiz)=>
                 <CategoryCard>
@@ -16,6 +18,7 @@ const CategoryPage = () => {
             )
             }
         </QuizCategoryCont>
+        <SecButton onClick={()=>navigate("/")}>Back</SecButton>
     </CategoryWrapper>
   )
 }

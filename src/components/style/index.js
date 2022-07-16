@@ -1,3 +1,3 @@
-export {HomeContainer,GlobalStyle,QuizIntroCont,CategoryWrapper,QuizCategoryCont,CategoryCard} from './stylecomponents/Container.style'
-export {VaspacxLogo,RulesList} from './stylecomponents/OtherElements.style'
-export {EffectButton,NormalButton} from './stylecomponents/Button.style'
+export {HomeContainer,GlobalStyle,QuizIntroCont,CategoryWrapper,QuizCategoryCont,CategoryCard,QuizBtnContainer,VaspacxContainer} from './stylecomponents/Container.style'
+export {VaspacxLogo,RulesList,QuestionNo,Footer,FooterList,Vaspacx} from './stylecomponents/OtherElements.style'
+export {EffectButton,NormalButton,PrimaryButton,SecButton,ToggleThemeBtn} from './stylecomponents/Button.style'
