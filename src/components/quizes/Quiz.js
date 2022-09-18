@@ -29,6 +29,7 @@ const Quiz = () => {
   console.log(filteredCategory);
   const questionNo = useSelector((state) => state.quiz.questionNo);
   const optionIndex = useSelector((state) => state.quiz.activeIndex);
+  const score = useSelector((state) => state.quiz.score);
   const navigate = useNavigate();
   const nextQuestion = () => {
     dispatch(questionActions.nextQuestionHandler());
@@ -37,10 +38,17 @@ const Quiz = () => {
       navigate("/");
       dispatch(questionActions.setQuestionZero());
     }
+    console.log(score);
   };
 
   const optionHandler = (index) => {
     dispatch(questionActions.setActiveOption(index));
+    if (
+      filteredCategory[0].category.quiz[questionNo].answer ===
+      filteredCategory[0].category.quiz[questionNo].options[index]
+    ) {
+      dispatch(questionActions.getScore());
+    }
   };
 
   return (

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const quizInitialState = { questionNo: 0, activeIndex: null };
+const quizInitialState = { questionNo: 0, activeIndex: null, score: 0 };
 
 const questionSlice = createSlice({
   name: "question",
@@ -14,6 +14,9 @@ const questionSlice = createSlice({
     },
     setActiveOption(state, action) {
       state.activeIndex = action.payload;
+    },
+    getScore(state) {
+      state.score = state.score + 10;
     },
   },
 });
