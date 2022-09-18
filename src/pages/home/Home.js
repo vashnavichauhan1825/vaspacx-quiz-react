@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import {
   EffectButton,
   HomeContainer,
-  QuizIntroCont,
-  RulesList,
   VaspacxContainer,
-  VaspacxLogo,
 } from "../../components/style";
 import vaspacx from "../../assests/vaspacx.png";
 import quiz from "../../assests/quiz.png";
@@ -23,7 +20,6 @@ const Home = () => {
         <img src={toggle ? vaspacx : vaspacxlight} />
         <img src={toggle ? quiz : quizlight} />
         <Link to="/category">
-          {" "}
           <EffectButton>
             <i className="fa fa-chevron-right" aria-hidden="true"></i> Let's Go!
           </EffectButton>

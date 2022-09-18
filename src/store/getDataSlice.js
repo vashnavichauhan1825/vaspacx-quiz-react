@@ -6,6 +6,7 @@ const dataInitialState = {
   categoryLength: 4,
   questionLength: 28,
   update: false,
+  quizCollectionData: null,
 };
 
 const getDataSlice = createSlice({
@@ -24,6 +25,10 @@ const getDataSlice = createSlice({
         state.update = false;
       }
     },
+    getDataFromFirebase(state, action) {
+      state.quizCollectionData = action.payload[0].dummyQuiz;
+      console.log("updated !", state.quizCollectionData);
+    },
   },
 });
 
@@ -32,7 +37,12 @@ export const sendData = (dummyQuiz, quizUpdated) => {
   return async (dispatch) => {
     const sendRequest = async () => {
       const data = await getDocs(quizCollectionRef);
-      console.log(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      dispatch(
+        getDataActions.getDataFromFirebase(
+          data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+        )
+      );
+
       if (quizUpdated) {
         addDoc(quizCollectionRef, { dummyQuiz });
       }

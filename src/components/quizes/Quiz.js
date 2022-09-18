@@ -1,12 +1,16 @@
 import React from "react";
-import { CategoryWrapper, PrimaryButton, QuestionNo } from "../style";
+import {
+  CategoryWrapper,
+  PrimaryButton,
+  QuestionNo,
+  QuizOptionBtn,
+} from "../style";
 import {
   Option,
   OptionsCont,
   QuizBtnContainer,
   QuizQuestion,
 } from "../style/stylecomponents/Container.style";
-import { dummyQuiz } from "../firebase-data/data";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { questionActions } from "../../store/questionSlice";
@@ -15,19 +19,28 @@ import ToggleTheme from "../toggleTheme/ToggleTheme";
 
 const Quiz = () => {
   const { categoryId } = useParams();
+
   const dispatch = useDispatch();
-  const filteredCategory = dummyQuiz.filter(
+  const quizData = useSelector((state) => state.quizData.quizCollectionData);
+
+  const filteredCategory = quizData.filter(
     (category) => category.category.quizId === categoryId
   );
+  console.log(filteredCategory);
   const questionNo = useSelector((state) => state.quiz.questionNo);
-
+  const optionIndex = useSelector((state) => state.quiz.activeIndex);
   const navigate = useNavigate();
   const nextQuestion = () => {
     dispatch(questionActions.nextQuestionHandler());
+    dispatch(questionActions.setActiveOption(null));
     if (filteredCategory[0].category.quiz.length === questionNo + 1) {
       navigate("/");
       dispatch(questionActions.setQuestionZero());
     }
+  };
+
+  const optionHandler = (index) => {
+    dispatch(questionActions.setActiveOption(index));
   };
 
   return (
@@ -41,49 +54,17 @@ const Quiz = () => {
               <h2>{quiz.category.quiz[questionNo].question}</h2>
             </QuizQuestion>
             <OptionsCont>
-              <Option>
-                <label>
-                  <input
-                    type="radio"
-                    name={quiz.category.quiz[questionNo].question}
-                    value={quiz.category.quiz[questionNo].optionOne}
-                  />
-                  {quiz.category.quiz[questionNo].optionOne}
-                </label>
-              </Option>
-              <Option>
-                <label htmlFor={quiz.category.quiz[questionNo].optionTwo}>
-                  <input
-                    type="radio"
-                    name={quiz.category.quiz[questionNo].question}
-                    value={quiz.category.quiz[questionNo].optionTwo}
-                    id={quiz.category.quiz[questionNo].optionTwo}
-                  />
-                  {quiz.category.quiz[questionNo].optionTwo}
-                </label>
-              </Option>
-              <Option>
-                <label htmlFor={quiz.category.quiz[questionNo].optionThree}>
-                  <input
-                    type="radio"
-                    name={quiz.category.quiz[questionNo].question}
-                    value={quiz.category.quiz[questionNo].optionTwo}
-                    id={quiz.category.quiz[questionNo].optionThree}
-                  />
-                  {quiz.category.quiz[questionNo].optionThree}
-                </label>
-              </Option>
-              <Option>
-                <label htmlFor={quiz.category.quiz[questionNo].optionFour}>
-                  <input
-                    type="radio"
-                    name={quiz.category.quiz[questionNo].question}
-                    value={quiz.category.quiz[questionNo].optionTwo}
-                    id={quiz.category.quiz[questionNo].optionFour}
-                  />
-                  {quiz.category.quiz[questionNo].optionFour}
-                </label>
-              </Option>
+              {quiz.category.quiz[questionNo].options.map((option, index) => (
+                <Option>
+                  <QuizOptionBtn
+                    bgColor={optionIndex === index ? "#ff72bf" : "#211c1c00"}
+                    onClick={() => optionHandler(index)}
+                    key={index}
+                  >
+                    {option}
+                  </QuizOptionBtn>
+                </Option>
+              ))}
             </OptionsCont>
             <QuizBtnContainer>
               <PrimaryButton>Submit</PrimaryButton>
