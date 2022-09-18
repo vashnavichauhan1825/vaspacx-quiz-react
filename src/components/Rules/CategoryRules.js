@@ -7,10 +7,14 @@ import {
 } from "../style";
 import { Link, useParams } from "react-router-dom";
 import ToggleTheme from "../toggleTheme/ToggleTheme";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { questionActions } from "../../store/questionSlice";
 
 const CategoryRules = () => {
   const { categoryId } = useParams();
+  const dispatch = useDispatch();
+  dispatch(questionActions.setCategory(categoryId));
+  dispatch(questionActions.getScore(0));
   const quizData = useSelector((state) => state.quizData.quizCollectionData);
   return (
     <HomeContainer>
@@ -35,7 +39,6 @@ const CategoryRules = () => {
                 !
               </p>
               <Link to={`/question/${categoryId}`}>
-                {" "}
                 <EffectButton>
                   <i class="fa fa-chevron-right" aria-hidden="true"></i>Start
                   Quiz

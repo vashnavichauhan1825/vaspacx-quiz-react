@@ -11,7 +11,6 @@ import { useSelector } from "react-redux";
 const CategoryPage = () => {
   const navigate = useNavigate();
   const quizData = useSelector((state) => state.quizData.quizCollectionData);
-  console.log(quizData.map((quiz) => quiz.quizTitle));
   return (
     <CategoryWrapper>
       <ToggleTheme />

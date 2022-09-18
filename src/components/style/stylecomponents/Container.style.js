@@ -30,6 +30,68 @@ export const HomeContainer = styled.div`
   height: 100vh;
 `;
 
+export const CircleContainer = styled.div`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  right: 17%;
+  box-shadow: 0px 0px 10px 2px var(--primary-color);
+  font-size: 5rem;
+  color: var(--fontColor);
+  background-color: var(--bgColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+`;
+export const ResultContainer = styled.div`
+  width: 486px;
+  height: 448px;
+  overflow-y: scroll;
+  color: var(--fontColor);
+  background-color: var(--bgColor);
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  padding: 1rem;
+  align-items: center;
+  position: absolute;
+  top: 13%;
+  left: 20%;
+
+  a {
+    text-decoration: none;
+  }
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: var(--bgColor);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
+`;
+
 export const QuizIntroCont = styled.div`
   width: 486px;
   height: auto;

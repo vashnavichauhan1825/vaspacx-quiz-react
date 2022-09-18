@@ -11,7 +11,7 @@ import {
   QuizBtnContainer,
   QuizQuestion,
 } from "../style/stylecomponents/Container.style";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { questionActions } from "../../store/questionSlice";
 import VaspacxFooter from "../footer/Footer";
@@ -26,7 +26,6 @@ const Quiz = () => {
   const filteredCategory = quizData.filter(
     (category) => category.category.quizId === categoryId
   );
-  console.log(filteredCategory);
   const questionNo = useSelector((state) => state.quiz.questionNo);
   const optionIndex = useSelector((state) => state.quiz.activeIndex);
   const score = useSelector((state) => state.quiz.score);
@@ -35,7 +34,7 @@ const Quiz = () => {
     dispatch(questionActions.nextQuestionHandler());
     dispatch(questionActions.setActiveOption(null));
     if (filteredCategory[0].category.quiz.length === questionNo + 1) {
-      navigate("/");
+      navigate("/result");
       dispatch(questionActions.setQuestionZero());
     }
     console.log(score);
@@ -47,7 +46,7 @@ const Quiz = () => {
       filteredCategory[0].category.quiz[questionNo].answer ===
       filteredCategory[0].category.quiz[questionNo].options[index]
     ) {
-      dispatch(questionActions.getScore());
+      dispatch(questionActions.getScore(10));
     }
   };
 
@@ -75,7 +74,9 @@ const Quiz = () => {
               ))}
             </OptionsCont>
             <QuizBtnContainer>
-              <PrimaryButton>Submit</PrimaryButton>
+              <Link to="/result">
+                <PrimaryButton>Submit</PrimaryButton>
+              </Link>
               <PrimaryButton onClick={() => nextQuestion()}>Next</PrimaryButton>
             </QuizBtnContainer>
           </>
