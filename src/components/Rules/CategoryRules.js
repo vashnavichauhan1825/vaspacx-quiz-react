@@ -1,12 +1,13 @@
 import { EffectButton, HomeContainer, QuizIntroCont, RulesList, VaspacxLogo } from "../style"
 import {Link, useParams} from 'react-router-dom'
-import { dummyQuiz } from "../../data";
+import { dummyQuiz } from "../firebase-data/data";
 import ToggleTheme from "../toggleTheme/ToggleTheme";
 
 const CategoryRules = () => {
     const {categoryId} =useParams();
   return (
-    <HomeContainer><ToggleTheme/>{dummyQuiz.filter((item)=> item.category.quizId === categoryId).map((quiz)=>{
+    <HomeContainer><ToggleTheme/>
+    {dummyQuiz.filter((item)=> item.category.quizId === categoryId).map((quiz)=>{
         return(
             <QuizIntroCont>
 
