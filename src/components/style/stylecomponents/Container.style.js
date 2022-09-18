@@ -67,6 +67,10 @@ export const ResultContainer = styled.div`
   top: 13%;
   left: 20%;
 
+  h4 {
+    letter-spacing: 1px;
+    color: var(--primary-color);
+  }
   a {
     text-decoration: none;
   }

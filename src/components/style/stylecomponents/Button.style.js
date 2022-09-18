@@ -90,12 +90,11 @@ export const QuizOptionBtn = styled.button`
   border: none;
   width: 100%;
   font-size: 1rem;
-  color: white;
+  color: var(--font-color);
   text-align: start;
   padding: 2rem;
   height: 100%;
   border-radius: 10px;
-  background: #ff72bf;
   cursor: pointer;
   background: ${(props) => props.bgColor};
 `;

@@ -9,6 +9,7 @@ import {
 import ToggleTheme from "../../components/toggleTheme/ToggleTheme";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import VaspacxFooter from "../../components/footer/Footer";
 
 const ResultPage = () => {
   const quizData = useSelector((state) => state.quizData.quizCollectionData);
@@ -23,6 +24,7 @@ const ResultPage = () => {
     <HomeContainer>
       <ToggleTheme />
       <ResultContainer>
+        <h4>CORRECT ANSWERS !</h4>
         {filterQuiz.map((quiz) => (
           <>
             <ResultQuestion>{quiz.question}</ResultQuestion>
@@ -40,6 +42,7 @@ const ResultPage = () => {
         <p>SCORE</p>
         {score}
       </CircleContainer>
+      <VaspacxFooter />
     </HomeContainer>
   );
 };

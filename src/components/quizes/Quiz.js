@@ -64,7 +64,11 @@ const Quiz = () => {
               {quiz.category.quiz[questionNo].options.map((option, index) => (
                 <Option>
                   <QuizOptionBtn
-                    bgColor={optionIndex === index ? "#ff72bf" : "#211c1c00"}
+                    bgColor={
+                      optionIndex === index
+                        ? "var(--primary-color)"
+                        : "#211c1c00"
+                    }
                     onClick={() => optionHandler(index)}
                     key={index}
                   >
