@@ -86,6 +86,19 @@ export const SecButton = styled.button`
   }
 `;
 
+export const QuizOptionBtn = styled.button`
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--font-color);
+  text-align: start;
+  padding: 2rem;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  background: ${(props) => props.bgColor};
+`;
+
 export const ToggleThemeBtn = styled.div`
   width: 30px;
   height: 30px;
@@ -93,7 +106,7 @@ export const ToggleThemeBtn = styled.div`
   background: transparent;
   position: absolute;
   top: 3%;
-  cursor:pointer;
+  cursor: pointer;
   right: 2%;
 
   img {
