@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect } from "react";
 import { GlobalStyle } from "./components/style";
 import Home from "./pages/home/Home";
 import { Route, Routes } from "react-router-dom";
@@ -10,6 +10,7 @@ import Quiz from "./components/quizes/Quiz";
 import { lightTheme } from "./components/style/stylecomponents/themes";
 import { darkTheme } from "./components/style/stylecomponents/themes";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   categoryLength,
   dummyQuiz,
@@ -28,6 +29,7 @@ function App() {
         qL: questionsLength,
       })
     );
+
     dispatch(sendData(dummyQuiz, quizUpdated));
   }, []);
   return (

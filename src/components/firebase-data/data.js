@@ -7,7 +7,7 @@ export const dummyQuiz = [
       quizRules: [
         "There are five questions in Quiz",
         "you can choose only one option",
-        "4 marks for each Question",
+        "10 marks for each Question",
         "There is no negative marking",
         "You can also skip the questions",
       ],
@@ -48,22 +48,10 @@ export const dummyQuiz = [
         },
         {
           id: uuidv4(),
-          question: "Which of these objects is the farthest from the Sun ?",
-          options: ["Saturn", "Neptune", "90377 Sedna", "Kuiper belt"],
-          answer: "Neptune",
-        },
-        {
-          id: uuidv4(),
           question:
             "What term describes the alignment of three celestial bodies?",
           options: ["syzygy", "sizzle", "symbology", "suzerainty"],
           answer: "syzygy",
-        },
-        {
-          id: uuidv4(),
-          question: "What is the smallest planet in the solar system by mass?",
-          options: ["Earth", "Mercury", "Mars", "Jupiter"],
-          answer: "Mercury",
         },
       ],
     },
@@ -74,7 +62,7 @@ export const dummyQuiz = [
       quizRules: [
         "There are five questions in Quiz",
         "you can choose only one option",
-        "4 marks for each Question",
+        "10 marks for each Question",
         "There is no negative marking",
         "You can also skip the questions",
       ],
@@ -85,58 +73,39 @@ export const dummyQuiz = [
         {
           id: uuidv4(),
           question:
-            "The day on which the Sun ’ s direct rays cross the celestial equator is called:",
-          options: [
-            "The Aphelion",
-            "The Solstice",
-            "The Equinox",
-            "The Ecliptic",
-          ],
-          answer: "The Equinox",
+            "There have been more missions to this planet versus any other planet:",
+          options: ["Saturn", "Mars", "Neptune", "Uranus"],
+          answer: "Mars",
         },
         {
           id: uuidv4(),
-          question: "Which of these objects is the farthest from the Sun ?",
-          options: ["Saturn", "Neptune", "90377 Sedna", "Kuiper belt"],
-          answer: "Neptune",
-        },
-        {
-          id: uuidv4(),
-          question:
-            "What term describes the alignment of three celestial bodies?",
-          options: ["syzygy", "sizzle", "symbology", "suzerainty"],
-          answer: "syzygy",
-        },
-        {
-          id: uuidv4(),
-          question:
-            "The day on which the Sun ’ s direct rays cross the celestial equator is called:",
-          options: [
-            "The Aphelion",
-            "The Solstice",
-            "The Equinox",
-            "The Ecliptic",
-          ],
-          answer: "The Equinox",
-        },
-        {
-          id: uuidv4(),
-          question: "Which of these objects is the farthest from the Sun ?",
-          options: ["Saturn", "Neptune", "90377 Sedna", "Kuiper belt"],
-          answer: "Neptune",
-        },
-        {
-          id: uuidv4(),
-          question:
-            "What term describes the alignment of three celestial bodies?",
-          options: ["syzygy", "sizzle", "symbology", "suzerainty"],
-          answer: "syzygy",
-        },
-        {
-          id: uuidv4(),
-          question: "What is the smallest planet in the solar system by mass?",
-          options: ["Earth", "Mercury", "Mars", "Jupiter"],
+          question: "Which is the smallest planet within our solar system?",
+          options: ["Saturn", "Mercury", "90377 Sedna", "Kuiper belt"],
           answer: "Mercury",
+        },
+        {
+          id: uuidv4(),
+          question: "The moon called Titan orbits which planet?",
+          options: ["Saturn", "Mercury", "Neptune", "Uranus"],
+          answer: "Saturn",
+        },
+        {
+          id: uuidv4(),
+          question:
+            "What protects Earth from meteoroids and radiation from the sun ?",
+          options: [
+            "The Aphelion",
+            "It’s atmosphere",
+            "The Equinox",
+            "The Ecliptic",
+          ],
+          answer: "It’s atmosphere",
+        },
+        {
+          id: uuidv4(),
+          question: "Which of these objects is the farthest from the Sun ?",
+          options: ["Saturn", "Neptune", "90377 Sedna", "Kuiper belt"],
+          answer: "Neptune",
         },
       ],
     },
@@ -147,7 +116,7 @@ export const dummyQuiz = [
       quizRules: [
         "There are five questions in Quiz",
         "you can choose only one option",
-        "4 marks for each Question",
+        "10 marks for each Question",
         "There is no negative marking",
         "You can also skip the questions",
       ],
@@ -159,26 +128,26 @@ export const dummyQuiz = [
         {
           id: uuidv4(),
           question:
-            "The day on which the Sun ’ s direct rays cross the celestial equator is called:",
+            "Which astronaut is famous for having written his daughter’s initials on the moon?",
+          options: ["Gene Cernan", "Neil Armstrong", "Pete Conrad", "Edwin"],
+          answer: "Gene Cernan",
+        },
+        {
+          id: uuidv4(),
+          question: "How long does it take the moon to orbit the Earth?",
+          options: ["60 days", "1 year", "28 days", "31 days"],
+          answer: "28 days",
+        },
+        {
+          id: uuidv4(),
+          question: "What are the storms produced by the sun called ?",
           options: [
-            "The Aphelion",
-            "The Solstice",
-            "The Equinox",
-            "The Ecliptic",
+            "Solar storms",
+            "Atomic storms",
+            "90377 Sedna",
+            "Kuiper belt",
           ],
-          answer: "The Equinox",
-        },
-        {
-          id: uuidv4(),
-          question: "Who invented the telescope ?",
-          options: ["Johannes Kepler", "Galileo", "Hypatia", "Hans Lippershey"],
-          answer: "Galileo",
-        },
-        {
-          id: uuidv4(),
-          question: "Which of these objects is the farthest from the Sun ?",
-          options: ["Saturn", "Neptune", "90377 Sedna", "Kuiper belt"],
-          answer: "Neptune",
+          answer: "Solar storms",
         },
         {
           id: uuidv4(),
@@ -189,15 +158,9 @@ export const dummyQuiz = [
         },
         {
           id: uuidv4(),
-          question: "What is the smallest planet in the solar system by mass?",
+          question: "Which is the densest planet in our solar system?",
           options: ["Earth", "Mercury", "Mars", "Jupiter"],
-          answer: "Mercury",
-        },
-        {
-          id: uuidv4(),
-          question: "Which of these objects is the farthest from the Sun ?",
-          options: ["Saturn", "Neptune", "90377 Sedna", "Kuiper belt"],
-          answer: "Neptune",
+          answer: "Earth",
         },
       ],
     },
@@ -206,9 +169,9 @@ export const dummyQuiz = [
     category: {
       quizId: uuidv4(),
       quizRules: [
-        "There are seven questions in Quiz",
+        "There are five questions in Quiz",
         "you can choose only one option",
-        "4 marks for each Question",
+        "10 marks for each Question",
         "There is no negative marking",
         "You can also skip the questions",
       ],
@@ -218,21 +181,20 @@ export const dummyQuiz = [
       quiz: [
         {
           id: uuidv4(),
-          question:
-            "The day on which the Sun ’ s direct rays cross the celestial equator is called:",
-          options: [
-            "The Aphelion",
-            "The Solstice",
-            "The Equinox",
-            "The Ecliptic",
-          ],
-          answer: "The Equinox",
+          question: "Which planet is known as the Evening Star?",
+          options: ["Mercury", "Mars", "Venus", "Earth"],
+          answer: "Venus",
         },
         {
           id: uuidv4(),
-          question: "Who invented the telescope ?",
-          options: ["Johannes Kepler", "Galileo", "Hypatia", "Hans Lippershey"],
-          answer: "Galileo",
+          question: "How long is one year on Jupiter?",
+          options: [
+            "12 Earth years",
+            "10 Earth years",
+            "9 Earth years",
+            "15 Earth years",
+          ],
+          answer: "12 Earth years",
         },
         {
           id: uuidv4(),
@@ -252,31 +214,6 @@ export const dummyQuiz = [
           question: "What is the smallest planet in the solar system by mass?",
           options: ["Earth", "Mercury", "Mars", "Jupiter"],
           answer: "Mercury",
-        },
-        {
-          id: uuidv4(),
-          question:
-            "The day on which the Sun ’ s direct rays cross the celestial equator is called:",
-          options: [
-            "The Aphelion",
-            "The Solstice",
-            "The Equinox",
-            "The Ecliptic",
-          ],
-          answer: "The Equinox",
-        },
-        {
-          id: uuidv4(),
-          question: "Which of these objects is the farthest from the Sun ?",
-          options: ["Saturn", "Neptune", "90377 Sedna", "Kuiper belt"],
-          answer: "Neptune",
-        },
-        {
-          id: uuidv4(),
-          question:
-            "What term describes the alignment of three celestial bodies?",
-          options: ["syzygy", "sizzle", "symbology", "suzerainty"],
-          answer: "syzygy",
         },
       ],
     },

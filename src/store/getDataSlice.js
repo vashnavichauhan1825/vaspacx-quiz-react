@@ -4,7 +4,7 @@ import { collection, getDocs, addDoc } from "firebase/firestore";
 
 const dataInitialState = {
   categoryLength: 4,
-  questionLength: 28,
+  questionLength: 20,
   update: false,
   quizCollectionData: null,
 };
